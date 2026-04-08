@@ -1,0 +1,14 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Python: MDD metadata parse",
+            "type": "python",
+            "request": "launch",
+            "program": "src/launcher.py",
+            "console": "integratedTerminal",
+            "args": ["--program","parse_mdd_metadata","--file","\"tests\\p2600752_mdata.mrs\""],
+            "justMyCode": true
+        }
+    ]
+}
