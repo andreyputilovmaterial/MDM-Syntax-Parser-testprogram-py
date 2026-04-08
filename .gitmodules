@@ -1,3 +1,6 @@
 [submodule "src-make/lib/pinliner"]
 	path = src-make/lib/pinliner
 	url = https://github.com/The-city-not-present/pinliner.git
+[submodule "src/lib/mdd_parser"]
+	path = src/lib/mdd_parser
+	url = https://github.com/andreyputilovmaterial/MDM-Syntax-Parser-py.git

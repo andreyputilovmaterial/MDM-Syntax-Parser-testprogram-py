@@ -38,7 +38,7 @@ ECHO -
 ECHO 1. read and parse
 ECHO read from: %SYNTAX_FILE%
 ECHO write to: .json
-python dist/mdmtoolsap_bundle.py --program parse_mdd_metadata --file "%SYNTAX_FILE%" %MDD_PARSE_CONFIG_SETTINGS%
+python src/launcher.py --program parse_mdd_metadata --file "%SYNTAX_FILE%" %MDD_PARSE_CONFIG_SETTINGS%
 if !ERRORLEVEL! NEQ 0 ( echo ERROR: Failure && pause && goto CLEANUP && exit /b !ERRORLEVEL! )
 
 

@@ -26,7 +26,8 @@ ECHO # print('out of mdmtoolsap_bundle') >> dist/mdmtoolsap_bundle.py
 
 PUSHD dist
 COPY ..\run_mddparse_test.bat .\run_mddparse_test.bat
-powershell -Command "(gc 'run_mddparse_test.bat' -encoding 'Default') -replace '(dist[/\\])?mdmtoolsap_bundle.py', 'mdmtoolsap_bundle.py' | Out-File -encoding 'Default' 'run_mddparse_test.bat'"
+powershell -Command "(gc 'run_mddparse_test.bat' -encoding 'Default') -replace '(?:(?:(dist[/\\])?mdmtoolsap_bundle\.py)|(?:src[/\\]launcher\.py))', 'mdmtoolsap_bundle.py' | Out-File -encoding 'Default' 'run_mddparse_test.bat'"
+powershell -Command "(gc 'run_mddparse_test.bat' -encoding 'Default') -replace '=tests\\', '=..\tests\' | Out-File -encoding 'Default' 'run_mddparse_test.bat'"
 POPD
 
 @REM ECHO Clear up ..\test_pinliner_results\...
